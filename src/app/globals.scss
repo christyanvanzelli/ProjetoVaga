@@ -1,0 +1,156 @@
+@use 'sass:color';
+$button-color: #CC6237; //orange
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'roboto', sans-serif;
+  font-weight: 400;
+  color: #CC6237; //orange
+}
+
+body {
+  background-color: #F9FBFF;
+}
+
+#form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+form {
+  width: 780px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  box-shadow: 0 2px 70px 30px rgba(0, 0, 0, 0.2);
+  height: 500px;
+  flex-wrap: wrap;
+  padding: 10px;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: flex-start;
+  line-height: 14px;
+}
+
+ 
+
+form h1 {
+  margin-left: 20px;
+  margin-top: 20px;
+  color: #CC6237; //orange
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 5px;
+  margin-bottom: 20px;
+}
+
+form h1 span {
+  line-height: 10px;
+ 
+}
+
+form input,
+form label,
+form span,
+form button {
+  margin-left: 20px;
+}
+
+form input {
+  margin-bottom: 10px;
+}
+
+form label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+form span {
+  font-size: 14px;
+  color: rgba(42, 77, 142, 0.5);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+form button {
+  margin-top: 20px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  font-size: 16px;
+  width: 300px;
+  height: 40px;
+  color: rgba(42, 77, 142, 0.8);
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  background-color: #CC6237;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  width: 300px;
+  height: 45px;
+  font-weight: 500;
+  &:hover {
+    background-color: color.scale(#6d3a25, $lightness: -10%);
+    color: white;
+  }
+}
+#section-img {
+  width: 52%;
+  display: flex;
+  height: 80vh;
+  margin-left: 30px;
+  background-color: #CC6237;
+  border-radius: 20px;
+   
+}
+ #img {
+    margin-top: 240px;
+    margin-left: -448px;
+    background-repeat: no-repeat;
+    height: 330px;
+    width: 500px;
+    border: none;
+    background-size: contain;
+    background-image: url('./assets/images/estatica.png');
+  }
+
+  form #view-pass {
+    background-image: url('./assets/images/view.png');
+    background-repeat: no-repeat;
+    height: 18px;
+    width: 30px;
+    margin-left: 273px;
+    margin-top: -50px;
+  }
+
+}
+
+#logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 300px;
+  height: 20px;
+}
+
+#logo-container #img1 {
+  width: 260px;
+  height: 70px;
+  background-image: url('./assets/images/Logo.png');
+  background-repeat: no-repeat;
+}
+
