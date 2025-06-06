@@ -1,10 +1,12 @@
 'use client';
 
 import Button from "@/components/eventPage";
+import { Logo } from "@/components/svg";
 import { useValidation } from "@/components/validation"; // ajuste aqui
 import { useState } from "react";
 
 export default function Page() {
+ 
   const [isShow, setIsShow] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -24,7 +26,7 @@ export default function Page() {
     <section id="form-section">
       <form onSubmit={handleSubmit}>
         <div id='logo-container'>
-          <div id='img1'></div>
+          <Logo className="logo-login"/>
         </div>
         <h1>Bem-vindo de volta</h1>
         <span>Entre com sua conta para acessar o painel</span>

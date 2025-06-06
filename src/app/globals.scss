@@ -1,143 +1,146 @@
 @use 'sass:color';
-$button-color: #CC6237; //orange
+
+$button-color: #CC6237; // Laranja principal
+
+// RESET E FONTES GLOBAIS
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  color: #CC6237; //orange
+  color: $button-color;
 }
 
 body {
   background-color: #F9FBFF;
 }
 
+// SECTION DE FORMULÁRIO
 #form-section {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 
-form {
-  width: 780px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background-color: white;
-  box-shadow: 0 2px 70px 30px rgba(0, 0, 0, 0.2);
-  height: 500px;
-  flex-wrap: wrap;
-  padding: 10px;
-  border-radius: 25px;
-  justify-content: center;
-  align-items: flex-start;
-  line-height: 14px;
+  form {
+    width: 780px;
+    height: 500px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    background-color: white;
+    box-shadow: 0 2px 70px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    line-height: 14px;
+
+    h1 {
+      margin: 20px 0 20px 20px;
+      font-size: 26px;
+      font-weight: 700;
+      color: $button-color;
+      line-height: 5px;
+
+      span {
+        line-height: 10px;
+      }
+    }
+
+    input,
+    label,
+    span,
+    button {
+      margin-left: 20px;
+    }
+
+    input {
+      margin-bottom: 10px;
+    }
+
+    label {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      color: rgba(42, 77, 142, 0.5);
+      margin-bottom: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+    }
+
+    #view-pass {
+      background-image: url('./assets/images/view.png');
+      background-repeat: no-repeat;
+      height: 18px;
+      width: 30px;
+      margin-left: 273px;
+      margin-top: -50px;
+    }
+  }
 }
 
- 
-
-form h1 {
-  margin-left: 20px;
-  margin-top: 20px;
-  color: #CC6237; //orange
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 5px;
-  margin-bottom: 20px;
-}
-
-form h1 span {
-  line-height: 10px;
- 
-}
-
-form input,
-form label,
-form span,
-form button {
-  margin-left: 20px;
-}
-
-form input {
-  margin-bottom: 10px;
-}
-
-form label {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-form span {
-  font-size: 14px;
-  color: rgba(42, 77, 142, 0.5);
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-
-form button {
-  margin-top: 20px;
-}
-
+// INPUT E BOTÃO PADRÃO
 input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 100px;
-  font-size: 16px;
   width: 300px;
   height: 40px;
+  padding: 10px;
+  font-size: 16px;
   color: rgba(42, 77, 142, 0.8);
+  border: 1px solid #ccc;
+  border-radius: 100px;
+
   &:focus {
     outline: none;
   }
 }
 
 button {
-  background-color: #CC6237;
-  color: white;
+  width: 300px;
+  height: 45px;
   padding: 10px;
+  font-weight: 500;
+  color: white;
+  background-color: $button-color;
   border: none;
   border-radius: 100px;
   cursor: pointer;
-  width: 300px;
-  height: 45px;
-  font-weight: 500;
+
   &:hover {
-    background-color: color.scale(#6d3a25, $lightness: -10%);
-    color: white;
+    background-color: color.scale($button-color, $lightness: -10%);
   }
 }
+
+// IMAGEM LATERAL DO FORMULÁRIO
 #section-img {
   width: 52%;
-  display: flex;
   height: 80vh;
   margin-left: 30px;
-  background-color: #CC6237;
+  display: flex;
+  background-color: $button-color;
   border-radius: 20px;
-   
-}
- #img {
-    margin-top: 240px;
-    margin-left: -448px;
-    background-repeat: no-repeat;
-    height: 330px;
-    width: 500px;
-    border: none;
-    background-size: contain;
-    background-image: url('./assets/images/estatica.png');
-  }
-
-  form #view-pass {
-    background-image: url('./assets/images/view.png');
-    background-repeat: no-repeat;
-    height: 18px;
-    width: 30px;
-    margin-left: 273px;
-    margin-top: -50px;
-  }
-
 }
 
+#img {
+  margin-top: 240px;
+  margin-left: -448px;
+  width: 500px;
+  height: 330px;
+  background-image: url('./assets/images/estatica.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+}
+
+// LOGO EM TELA DE LOGIN
 #logo-container {
   display: flex;
   justify-content: center;
@@ -147,13 +150,147 @@ button {
   height: 20px;
 }
 
-#logo-container #img1 {
-  width: 260px;
+.logo-login {
+  width: 200px;
   height: 70px;
-  background-image: url('./assets/images/Logo.png');
+  margin-top: -50px;
+  margin-right: 55px;
   background-repeat: no-repeat;
 }
 
-#eventos-page {
+// LAYOUT GERAL
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: white;
+}
+
+// ÁREA PRINCIPAL (MAIN)
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  header {
+    padding: 2rem 3rem;
+    background-color: #F8F8F8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+    h2 {
+      margin: 0;
+      margin-top: 30px;
+      font-size: 1.25rem;
+      font-weight: 200;
+      color: #525151;
+
+      strong {
+        color: black;
+      }
+    }
+
+    .welcome-letter {
+      color: $button-color;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 600;
+    }
+  }
+
+  .content {
+    padding: 2rem;
+  }
+}
+
+// MENU LATERAL (ASIDE)
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 250px;
+  margin-left: 20px;
+  background-color: white;
+  border-right: 1px solid #cacaca;
+
+  #logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 0 10px;
+    width: 300px;
+    height: 20px;
+  }
+
+  #logo {
+    width: 260px;
+    height: 70px;
+    margin-top: 60px;
+    background-image: url('./assets/images/Logo.png');
+    background-repeat: no-repeat;
+  }
+
+  #menu {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0 0 20px;
+    gap: 15px;
+
+    span {
+      font-size: 14px;
+      font-weight: 600;
+      color: #A3A3A3;
+      margin: 20px 0 0 10px;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px;
+      width: 150px;
+      font-size: 15px;
+      font-weight: 600;
+      margin: 5px 5px 0 0;
+      color: black;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      border-radius: 10px;
+
+      &:hover {
+        background-color: $button-color;
+        color: white;
+
+        svg {
+          fill: white;
+        }
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+        fill: black;
+      }
+    }
+  }
+  #menu2 {
+    margin-top: 200px;
+  }
+}
+
+// ÍCONES E CLASSES AUXILIARES
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 50px;
+  margin-bottom: -47px;
+}
+
+.logo {
+  margin-bottom: -80px;
+  margin-right: 100px;
+}
+
+.events-icon {
   background-color: black;
+  margin-bottom: -30px;
 }
