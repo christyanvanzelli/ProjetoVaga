@@ -1,6 +1,8 @@
-import { Events, Logo, Menu, Subscribe, Team } from "@/components/svg";
+import { Events, Icon, IconData, Logo, Logout, Menu, Online, Plus, Search, Subscribe, Team } from "@/components/svg";
+
 
 export default function EventosPage() {
+ 
   return (
     <div className="layout">
       <aside>
@@ -27,8 +29,24 @@ export default function EventosPage() {
           </button>
         </div>
         <div id="menu2">
-            <div>...</div>
-        </div>
+  <div className="profile">
+    <Icon />
+    <div className="info">
+      <p className="name">Kaique Steck</p>
+      <p className="role">Administrador</p>
+    </div>
+  </div>
+
+  <button className="menu-item">
+    <IconData />
+    <span>Alterar dados</span>
+  </button>
+
+  <button className="menu-item">
+    <Logout /> 
+    <span>Sair</span>
+  </button>
+</div>
       </aside>
 
       <main>
@@ -36,8 +54,56 @@ export default function EventosPage() {
           <h2>Bem vindo de volta, <strong>Kaique Steck</strong></h2>
           <h2 className="welcome-letter">Todos eventos</h2>
         </header>
+
+            
         <section className="content">
-          <h1>...</h1>
+        <form className="event-form">
+            <div className="form-header">
+              <p className="events-search">
+                <Search/>
+                Buscar Eventos</p>
+              <p className="insert">
+                <Plus/>
+                Inserir Novo</p>
+            </div>
+
+            <div className="table-header">
+              <span>Nome do evento</span>
+              <span>Total de equipes</span>
+              <span>Status</span>
+              <span>Data</span>
+            </div>
+
+            <div className="table-row">
+                <p> Clube do laço coração pantaneiro</p>
+                <p>10</p>
+             <div>
+                <p>
+                  <Online className="online"/>
+                  ativo</p>
+                </div>  
+                  <p>09 a 11 de junho</p>
+                  <div>...</div>
+            </div>
+            <div className="table-row">
+                <p>Clube Laço do coração pantaneiro</p>
+                <p>10</p>
+                
+             <div>
+                <p>
+                  <Online className="online"/>
+                  ativo</p>
+                </div>  
+                  <p>09 a 11 de junho</p>
+                  <div>...</div>
+            </div>
+            
+
+            <div className="form-actions">
+              <button type="button" className="cancelar">Cancelar</button>
+              <button type="submit" className="salvar">Salvar</button>
+            </div>
+          </form>
         </section>
       </main>
     </div>
