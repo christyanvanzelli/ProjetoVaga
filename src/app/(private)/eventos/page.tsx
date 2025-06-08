@@ -1,4 +1,4 @@
-import { Events, Icon, IconData, Logo, Logout, Menu, Online, Plus, Search, Subscribe, Team } from "@/components/svg";
+import { Events, Icon, IconData, Logo, Logout, Menu, More, Online, Plus, Search, Subscribe, Team } from "@/components/svg";
 
 
 export default function EventosPage() {
@@ -83,7 +83,8 @@ export default function EventosPage() {
                   ativo</p>
                 </div>  
                   <p>09 a 11 de junho</p>
-                  <div>...</div>
+                  
+                  <p><More className="more"/></p>
             </div>
             <div className="table-row">
                 <p>Clube Laço do coração pantaneiro</p>
@@ -95,13 +96,17 @@ export default function EventosPage() {
                   ativo</p>
                 </div>  
                   <p>09 a 11 de junho</p>
-                  <div>...</div>
+                  
+                  <p><More className="more"/></p>
             </div>
             
 
             <div className="form-actions">
-              <button type="button" className="cancelar">Cancelar</button>
-              <button type="submit" className="salvar">Salvar</button>
+              <p className="proxima">Proxima</p>
+                <p className="button-table">1</p>
+                <p className="button-table">2</p>
+                <p className="button-table">3</p>
+              <p className="anterior">Anterior</p>
             </div>
           </form>
         </section>

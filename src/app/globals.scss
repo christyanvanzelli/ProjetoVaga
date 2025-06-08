@@ -34,16 +34,33 @@ body {
     align-items: flex-start;
     gap: 10px;
     background-color: white;
-    box-shadow: 0 2px 70px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 100px 70px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
     line-height: 14px;
+    input {
+      &::placeholder {
+        color: #657593; // Cor desejada
+      }
+    
+      &::-webkit-input-placeholder {
+        color: #657593;
+      }
+    
+      &:-ms-input-placeholder {
+        color: #657593;
+      }
+    
+      &::-ms-input-placeholder {
+        color: #657593;
+      }
+    }
 
     h1 {
-      margin: 20px 0 20px 20px;
+      margin: 10px 0 20px 20px;
       font-size: 26px;
       font-weight: 700;
       color: $button-color;
-      line-height: 5px;
+      line-height: 2px;
 
       span {
         line-height: 10px;
@@ -54,11 +71,17 @@ body {
     label,
     span,
     button {
-      margin-left: 20px;
+      margin-left: 20px; 
+      
     }
 
     input {
       margin-bottom: 10px;
+      color: black;
+      background-color: #F6F6F6;
+      border: none;
+      padding: 15px;
+        
     }
 
     label {
@@ -67,10 +90,12 @@ body {
     }
 
     span {
-      font-size: 14px;
-      font-weight: 400;
-      color: rgba(42, 77, 142, 0.5);
+      font-size: 16px;
+      font-weight: 500;
+      color: #657593;
       margin-bottom: 20px;
+      margin-top: -15px;
+      margin-right: -2px;
     }
 
     button {
@@ -91,12 +116,13 @@ body {
 // INPUT E BOTÃO PADRÃO
 input {
   width: 300px;
-  height: 40px;
+  height: 50px;
   padding: 10px;
   font-size: 16px;
-  color: rgba(42, 77, 142, 0.8);
+  color: #657593;
   border: 1px solid #ccc;
-  border-radius: 100px;
+  border-radius: 120px;
+  
 
   &:focus {
     outline: none;
@@ -176,13 +202,15 @@ main {
     padding: 2rem 3rem;
     background-color: #F8F8F8;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #ccc;
 
     h2 {
       margin: 0;
       margin-top: 30px;
       font-size: 1.25rem;
-      font-weight: 200;
+      font-weight: 700;
       color: #525151;
+  
 
       strong {
         color: black;
@@ -193,6 +221,7 @@ main {
       color: $button-color;
       font-family: 'Roboto', sans-serif;
       font-weight: 600;
+      font-size: 27px;
     }
   }
 
@@ -206,6 +235,7 @@ main {
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
     width: 100%;
     max-width: 100%;
+    border: 1px solid #ccc;
   
     .form-header {
       display: flex;
@@ -287,8 +317,8 @@ main {
     .table-header, .table-row {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-      gap: 1rem;
-      padding: 0.75rem 0;
+      gap: 10rem;
+      padding: 0.5rem 0;
       align-items: center;
       border-bottom: 1px solid #d163282c;
     }
@@ -310,29 +340,52 @@ main {
               margin-right: 10px;
             }
         }
+        .more {
+          margin-left: 150px;
+        }
     }
   
     .form-actions {
-      margin-top: 1.5rem;
+      margin-top: 1.8rem;
       display: flex;
       justify-content: flex-end;
       gap: 1rem;
   
-      .cancelar {
+      .proxima {
         background: transparent;
-        border: 1px solid #ccc;
         color: #333;
-        padding: 0.6rem 1.2rem;
-        border-radius: 6px;
+        padding: 0.7rem 1.2rem;
+        border-radius: 20px;
         cursor: pointer;
+        background-color: #cacaca27;
+        border: none;
+      }
+      .button-table {
+          display: flex;
+          color: black;
+          border: none;
+          padding-top: 12px;
+          padding-bottom: 12px;
+          padding-left: 20px;
+          padding-right: 20px;
+          border-radius: 25px;
+          cursor: pointer;
+          background-color: #cacaca27;
+          justify-content: center;
+          align-items: center;
+          font-weight: 500;
+            &:hover {
+              background-color: #CC6237;
+              color: white;
+            }
       }
   
-      .salvar {
+      .anterior {
         background: #D16428;
         color: white;
         border: none;
-        padding: 0.6rem 1.2rem;
-        border-radius: 6px;
+        padding: 0.7rem 1.2rem;
+        border-radius: 20px;
         cursor: pointer;
   
         &:hover {
@@ -377,7 +430,7 @@ aside {
   #menu {
     display: flex;
     flex-direction: column;
-    margin: 50px 0 0 20px;
+    margin: 60px 0 0 20px;
     gap: 15px;
 
     span {
@@ -392,9 +445,9 @@ aside {
       align-items: center;
       gap: 8px;
       padding: 10px;
-      width: 20 0px;
+      width: 200px;
       font-size: 17px;
-      font-weight: 500;
+      font-weight: 00;
       margin: 5px 5px 0 0;
       color: black;
       background-color: transparent;

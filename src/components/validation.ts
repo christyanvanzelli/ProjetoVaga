@@ -20,7 +20,7 @@ export function useValidation() {
       setError(null); 
       router.push('/eventos');
     } else {
-      alert('E-mail ou senha inválidos. Tente novamente.');
+      alert('E-mail ou senha inválidos. Tente novamente, Dica: Tente email: admin@admin.admin / senha: admin123 ');
     }
 
     return isValid;
