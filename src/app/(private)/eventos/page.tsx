@@ -87,7 +87,7 @@ export default function EventosPage() {
                   <p><More className="more"/></p>
             </div>
             <div className="table-row">
-                <p className="name-form">Clube Laço do coração pantaneiro</p>
+                <p className="name-form">Clube do laço coração pantaneiro</p>
                 <p className="total-team">10</p>
                 
              <div>

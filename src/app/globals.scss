@@ -956,14 +956,21 @@ aside {
 @media screen and (min-width: 720px) and (max-width: 1366px)  {
   .layout {
   .header {
-    max-width: 1350px;
+    max-width: 1366px;
   }
   .content {
     max-width: 1366px;
+    overflow-x: auto;
   .table-row {
         white-space: nowrap;
         font-size: 12px;
-    .more {  
+    
+        .name-form {
+          width: 140px;
+          text-overflow: ellipsis;
+        }
+    
+        .more {  
       margin-left: 50px;
       width: 24px;
       height: 24px;
