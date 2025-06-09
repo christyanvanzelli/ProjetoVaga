@@ -41,18 +41,7 @@ body {
       &::placeholder {
         color: #657593; // Cor desejada
       }
-    
-      &::-webkit-input-placeholder {
-        color: #657593;
-      }
-    
-      &:-ms-input-placeholder {
-        color: #657593;
-      }
-    
-      &::-ms-input-placeholder {
-        color: #657593;
-      }
+
     }
 
     h1 {
