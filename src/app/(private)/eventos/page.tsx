@@ -75,27 +75,27 @@ export default function EventosPage() {
             </div>
 
             <div className="table-row">
-                <p> Clube do laço coração pantaneiro</p>
-                <p>10</p>
+                <p className="name-form"> Clube do laço coração pantaneiro</p>
+                <p className="total-team">10</p>
              <div>
-                <p>
+                <p className="online-div">
                   <Online className="online"/>
                   ativo</p>
                 </div>  
-                  <p>09 a 11 de junho</p>
+                  <p className="data-form">09 a 11 de junho</p>
                   
                   <p><More className="more"/></p>
             </div>
             <div className="table-row">
-                <p>Clube Laço do coração pantaneiro</p>
-                <p>10</p>
+                <p className="name-form">Clube Laço do coração pantaneiro</p>
+                <p className="total-team">10</p>
                 
              <div>
-                <p>
+                <p className="online-div">
                   <Online className="online"/>
                   ativo</p>
                 </div>  
-                  <p>09 a 11 de junho</p>
+                  <p className="data-form">09 a 11 de junho</p>
                   
                   <p><More className="more"/></p>
             </div>
