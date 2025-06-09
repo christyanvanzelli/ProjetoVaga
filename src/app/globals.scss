@@ -250,14 +250,14 @@ main {
         justify-content: start;
         align-items: end;
         gap: 8px;
-        padding: 10px;
+        padding: 12px;
         width: 250px;
         font-size: 14px;
         font-weight: 500;
         color: #cacaca;
         background-color: transparent;
         border: none;
-        cursor: pointer;
+
         border-radius: 30px;
         background-color: #cacaca27;
           svg {
@@ -279,15 +279,14 @@ main {
         justify-content: flex-start;
         align-items: end;
         gap: 8px;
-        padding: 10px;
+        padding: 12px;
         width: 150px;
         font-size: 14px;
         font-weight: 500;
         color: #ffffff;
         background-color: transparent;
         border: none;
-        cursor: pointer;
-        border-radius: 30px;
+        border-radius: 50px;
         background-color: #CC6237;
           svg {
             fill: white;
@@ -352,6 +351,7 @@ main {
       display: flex;
       justify-content: flex-end;
       gap: 1rem;
+      height: 40px;
   
       .proxima {
         background: transparent;
@@ -361,13 +361,16 @@ main {
         cursor: pointer;
         background-color: #cacaca27;
         border: none;
+          &:hover {
+            background-color: #8f8c8c4d;
+          }
       }
       .button-table {
           display: flex;
           color: black;
           border: none;
-          padding-top: 10px;
-          padding-bottom: 12px;
+          padding-top: 5px;
+          padding-bottom: 5px;
           padding-left: 20px;
           padding-right: 20px;
           border-radius: 25px;
@@ -386,7 +389,7 @@ main {
         background: #D16428;
         color: white;
         border: none;
-        padding: 0.7rem 1.2rem;
+        padding: 0.7rem 1rem;
         border-radius: 20px;
         cursor: pointer;
   
@@ -411,6 +414,7 @@ aside {
   background-color: white;
   border-right: 1px solid #cacaca;
   font-family: 'roboto', sans-serif;
+
 
   #logo-container {
     display: flex;
@@ -437,9 +441,10 @@ aside {
 
     span {
       font-size: 16px;
-      font-weight: 600;
+      font-weight:600;
       color: #A3A3A3;
-      margin: 20px 0 0 10px;
+      margin: 5px 0 0 10px;
+      margin-top: 20px;
     }
 
     button {
@@ -449,7 +454,7 @@ aside {
       padding: 10px;
       width: 200px;
       font-size: 17px;
-      font-weight: 00;
+      font-weight: 600;
       margin: 5px 5px 0 0;
       color: black;
       background-color: transparent;
@@ -539,6 +544,7 @@ aside {
       
         span {
           color: black;
+          font-weight: bold;
         }
       
         &:hover {
